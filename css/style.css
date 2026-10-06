@@ -1,0 +1,351 @@
+:root {
+    --primary: #3457D5;
+    --primary-dark: #2846B0;
+    --secondary: #0FA3B1;
+    --light-blue: #B5E2FA;
+    --background: #F9F7F3;
+    --highlight: #EDDEA4;
+    --dark: #1E293B;
+    --gray: #64748B;
+    --white: #FFFFFF;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --transition: 0.3s ease;
+}
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--dark);
+    line-height: 1.7;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.navbar {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 55px;
+    width: auto;
+}
+/* MENU */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+.nav-menu a {
+    color: var(--dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+.nav-menu a:hover {
+    color: var(--primary);
+}
+/* BOTÕES */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+.btn-secondary {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+/* HERO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+}
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.hero-image {
+    flex: 1;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+/* TÍTULOS */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+.section-title p {
+    color: var(--gray);
+}
+/* SEÇÕES */
+section {
+    scroll-margin-top: 100px;
+}
+/* SERVIÇOS */
+.services {
+    padding: 100px 0;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+.service-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.service-card:hover {
+    transform: translateY(-6px);
+}
+.service-card h3 {
+    margin-bottom: 15px;
+}
+/* BENEFÍCIOS */
+.benefits {
+    background: var(--light-blue);
+    padding: 100px 0;
+}
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.benefit-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+/* PORTFÓLIO */
+
+.portfolio {
+    background: var(--white);
+    padding: 100px 0;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+.portfolio-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.portfolio-card:hover {
+    transform: translateY(-8px);
+}
+/* CTA */
+.cta {
+    background: var(--highlight);
+    padding: 100px 0;
+    text-align: center;
+}
+.cta h2 {
+    margin-bottom: 20px;
+}
+.cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+/* CONTATO */
+.contact {
+    padding: 100px 0;
+    background: var(--white);
+}
+.contact-box {
+    text-align: center;
+}
+.contact-box h2 {
+    margin-bottom: 15px;
+}
+.contact-box p {
+    margin-bottom: 25px;
+}
+/* FOOTER */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 50px 20px;
+}
+footer h3 {
+    margin-bottom: 15px;
+}
+footer p {
+    margin: 8px 0;
+}
+/* WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: var(--transition);
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-image img {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    .logo img {
+        height: 45px;
+    }
+}
+@media (max-width: 576px) {
+
+    .hero {
+        min-height: auto;
+        padding: 80px 0;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero-image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
